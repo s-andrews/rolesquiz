@@ -1,0 +1,90 @@
+.jumbotron {
+    background-color: rgb(139, 83, 0);
+    color: white;
+    
+}
+
+div.role {
+    font-size: 150%;
+    padding-top: 1em;
+}
+
+
+audio {
+    padding-bottom: 0;
+    margin-bottom: -0.4em;
+
+}
+
+.btn-success {
+    font-size: 200%;
+    padding: 1em;
+    margin: 2em;
+}
+
+#answerdiv {
+    width: 50%;
+    background-color: red;
+    color: white;
+    position: fixed;
+    left: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-top:4em;
+    padding-bottom: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 3em;
+    display: none;
+
+}
+
+#fadediv {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+    opacity: 0.8;
+    display: none;
+}
+
+
+.playagain {
+    margin-top: 2em;
+    color: black;
+}
+
+.wrong {
+    background-color: darkred;
+    color: white;
+    padding: 0.2em;
+}
+
+.correct {
+    background-color: darkgreen;
+    color: white;
+    padding: 0.2em;
+
+}
+
+
+/* Some optimisations for phones */
+@media only screen and (max-width: 800px) {
+    div.role {
+        font-size: 100%;
+    }
+
+    .btn-success {
+        font-size: 100%;
+        padding: 1em;
+        margin: 1em;
+    }
+
+    #answerdiv {
+        width: 90%;
+        left: 5%;
+    }    
+}
