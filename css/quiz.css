@@ -30,11 +30,8 @@ div.role ul {
     padding-bottom: 1em;
 }
 
-
-audio {
-    padding-bottom: 0;
-    margin-bottom: -0.4em;
-
+.headshot {
+    text-align: center;
 }
 
 .btn-success {
