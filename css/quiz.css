@@ -1,7 +1,8 @@
 .jumbotron {
-    background-color: rgb(139, 83, 0);
+    background-color: black;
+    background-image: url("../images/lighting.jpg");
+    background-position: center;
     color: white;
-    
 }
 
 div.role {
