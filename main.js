@@ -1,17 +1,16 @@
 $(document).ready(function(){
 
-
     // Load in the roles and place them in the document
     $.getJSON('roles.json', function(roles) {
         //roles is the JSON string
         rolediv = $("#roles")
 
-        usedIndices = new Set()
+        usedIndices = new Set();
 
         for (i=0; i < roles.length; i++) {
             usedIndices.add(roles[i]["index"])
-            console.log("Added "+roles[i]["index"])
-            rolediv.append("<div class=\"role text-center\">role "+(i+1)+": <img width=\"200\" height=\"auto\" src=\""+roles[i]["file"]+"\" > <span class=\"answerlabel\">Answer:</span> <select class=\"answers\"></select></div>")
+            rolediv.append("<div class=\"role container-fluid\"><h3>Role "+String(i+1)+"</h3><div class=\"col-md-4\"><img src=\"images/"+roles[i]["gender"]+".png\"></div><div class=\"col-md-8\"><ul><li><strong>Name:</strong> "+roles[i]["name"]+"</li><li><strong>Gender:</strong> "+roles[i]["gender"]+"</li><li><strong>Age:</strong> "+roles[i]["age"]+"</li></ul><p>"+roles[i]["description"]+"</p><p><strong>Answer:</strong><select></select></p></div></div>");
+            //rolediv.append("<div class=\"role text-center\">role "+(i+1)+": <img width=\"200\" height=\"auto\" src=\""+roles[i]["file"]+"\" > <span class=\"answerlabel\">Answer:</span> <select class=\"answers\"></select></div>")
         }
 
         

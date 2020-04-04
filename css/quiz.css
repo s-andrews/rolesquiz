@@ -8,6 +8,26 @@
 div.role {
     font-size: 150%;
     padding-top: 1em;
+    background-color: lightgray;
+    border-radius: 1em;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+div.role img {
+    width: 100%;
+    max-width: 200px;
+}
+
+div.role h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    padding-bottom: 0.5em;
+}
+
+div.role ul {
+    padding-bottom: 1em;
 }
 
 
@@ -88,4 +108,8 @@ audio {
         width: 90%;
         left: 5%;
     }    
+    div.role img {
+        width: 100%;
+        max-width: 100px;
+    }
 }
