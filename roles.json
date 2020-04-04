@@ -1,0 +1,143 @@
+[
+    {
+       "name" : "Grace Farrell",
+       "description" : "Faithful secretary to Mr. Oliver Warbucks. Poised, sweet, gentle.",
+       "gender" : "female",
+       "age" : "20 to 35",
+       "index" : 102
+    },
+    {
+        "name" : "Rod",
+        "description" : "An investment banker who is Republican and a closeted homosexual. Puppet.",
+        "gender" : "male",
+        "age" : "25 to 30",
+        "index" : 140
+     },
+     {
+        "name" : "Truly Scrumptious",
+        "description" : "Daughter of the famous candy maker, Lord Scrumptious. Strong and independent, but gentle. Falls in love with Caractacus.",
+        "gender" : "female",
+        "age" : "20 to 30",
+        "index" : 436 
+     },
+     {
+        "name" : "Bonnie",
+        "description" : "A no-nonsense mother of three, Bonnie is the head of the Gander area SPCA. When she discovers animals are trapped on the planes, she stops at nothing to ensure their safety - but in frustration, she often lashes out at those around her.",
+        "gender" : "female",
+        "age" : "30 to 40",
+        "index" : 473
+     },
+     {
+        "name" : "Robert",
+        "description" : "The story's protagonist, he is a keen observer who appears happy but holds pain in his heart. He is the only one of his friends still single. Terrified of marriage and fears a lifelong loneliness.",
+        "gender" : "male",
+        "age" : "30 to 35",
+        "index" : 476
+     },
+     {
+        "name" : "Christine Colgate",
+        "description" : "A seemingly good-natured American heiress vacationing on the French Riviera, who is revealed to be a notorious con artist. Naive and clueless at first, she becomes cunning and mischievous.",
+        "gender" : "female",
+        "age" : "35 to 45",
+        "index" : 559
+     },
+     {
+        "name" : "Eddie Birdlace",
+        "description" : "A Marine private first class. He is well respected and a natural leader amongst his comrades. Initially a hothead; a cocky smooth talker. He eventually sheds his brash exterior when he falls for Rose.",
+        "gender" : "male",
+        "age" : "18 to 25",
+        "index" : 572
+     },
+     {
+        "name" : "Jovie",
+        "description" : "Buddy's girlfriend. She works at Macy's and has a bit of a cynical outlook on life and love because of the men she's dated. She is caught off guard by Buddy's genuinely big heart.",
+        "gender" : "female",
+        "age" : "25 to 30",
+        "index" : 628
+     },
+     {
+        "name" : "Sarah Brown",
+        "description" : "A pretty, bright-eyed woman who serves as Sergeant of the local Mission. She fully believes in her worthy cause and wishes to convert the gambling sinners to saints. Falls unexpectedly in love with Sky along the way. She is prudish and uptight, but eventually lets go.",
+        "gender" : "female",
+        "age" : "20 to 30",
+        "index" : 772
+     },
+     {
+        "name" : "Corny Collins",
+        "description" : "The charismatic host of the Corny Collins' Show. Good looking and smooth talking, he is a genuinely nice guy both on and off camera.",
+        "gender" : "male",
+        "age" : "25 to 35",
+        "index" : 776
+     },
+     {
+        "name" : "The Baker",
+        "description" : "A harried and insecure baker who is simple and loving, yet protective of his family. He wants his wife to be happy and is willing to do anything to ensure her happiness but refuses to let others fight his battles.",
+        "gender" : "male",
+        "age" : "35 to 45",
+        "index" : 863
+     },
+     {
+        "name" : "Madame Thenardier",
+        "description" : "She is married to The´nardier. Together, Madame The´nardier and The´nardier con the world as partners in crime. They were made for each other, and although she complains about him, she loves him dearly.",
+        "gender" : "female",
+        "age" : "Not given",
+        "index" : 1051
+     },
+     {
+        "name" : "Orin Scrivello",
+        "description" : "An egotistical dentist with a passion for leather and sadistic tendencies. Audrey's abusive boyfriend, who is targeted by Seymour.",
+        "gender" : "male",
+        "age" : "30 to 40",
+        "index" : 971
+     },
+     {
+        "name" : "The Engineer",
+        "description" : "The owner of the &quot;Dreamland&quot; club. He is half-Vietnamese and half-French. Sleazy and ruthless.",
+        "gender" : "male",
+        "age" : "35 to 45",
+        "index" : 1054
+     },
+     {
+        "name" : "Colonel Pickering",
+        "description" : "A former British officer and author. Friends with Henry Higgins and a fellow phonetics enthusiast.",
+        "gender" : "male",
+        "age" : "50 to 70",
+        "index" : 1082
+     },
+     {
+        "name" : "Doralee",
+        "description" : "A young, sexy spitfire who works at Mr. Hart's office. She is proof that there is more to a woman than just her looks.",
+        "gender" : "female",
+        "age" : "20 to 30",
+        "index" : 15
+     },
+     {
+        "name" : "Tom Collins",
+        "description" : "A computer genius and liberal professor. He is a nurturer with a smooth and relaxed disposition. Used to be a roommate in the loft and is HIV-positive.",
+        "gender" : "male",
+        "age" : "25 to 35",
+        "index" : 1241
+     },
+     {
+        "name" : "Eddie Souther",
+        "description" : "The desk chief at the Philadelphia police station and a high school classmate of Deloris who helps get her into hiding. Faces a lot of nerves when under pressure, causing him to sweat profusely. He still yearns for Deloris after all these years, and dreams of being her hero.",
+        "gender" : "male",
+        "age" : "25 to 35",
+        "index" : 1329
+     },
+     {
+        "name" : "Nick Bottom",
+        "description" : "A struggling writer who cannot stand Shakespeare. Nigel’s older brother.",
+        "gender" : "male",
+        "age" : "30 to 40",
+        "index" : 1347
+     },
+     {
+        "name" : "Krupke",
+        "description" : "The local beat cop. He has no patience for the gangs conflict and tries to keep tensions from errupting between them. Regularly mocked by the local gangs.",
+        "gender" : "male",
+        "age" : "30 to 60",
+        "index" : 1494
+     },
+
+]
