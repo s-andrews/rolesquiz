@@ -7,6 +7,10 @@ $(document).ready(function(){
 
         usedIndices = new Set();
 
+        // Arrange the roles alphabetically by the name of the person
+        roles.sort((a,b) => (a["name"]>b["name"]) ? 1 : -1);
+
+
         for (i=0; i < roles.length; i++) {
             usedIndices.add(roles[i]["index"])
             rolediv.append("<div class=\"role container-fluid\"><h3>Role "+String(i+1)+"</h3><div class=\"col-md-4\"><img src=\"images/"+roles[i]["gender"]+".png\"></div><div class=\"col-md-8\"><ul><li><strong>Name:</strong> "+roles[i]["name"]+"</li><li><strong>Gender:</strong> "+roles[i]["gender"]+"</li><li><strong>Age:</strong> "+roles[i]["age"]+"</li></ul><p>"+roles[i]["description"]+"</p><p><span class=\"answerlabel\"><strong>Answer:</strong></span> <select class=\"answers\"></select></p></div></div>");
@@ -14,9 +18,6 @@ $(document).ready(function(){
         }
 
         
-        
-
-
         $.getJSON('suggestions.json', function(suggestions) {
 
             allanswers = $(".answers")
@@ -24,9 +25,7 @@ $(document).ready(function(){
             allanswers.append("<option value=\"\"></option>")
 
             for (i=0; i < suggestions.length; i++) {
-                if (usedIndices.has(parseInt(suggestions[i]["index"]))) {
-                    allanswers.append("<option value=\""+suggestions[i]["index"]+"\">"+suggestions[i]["name"]+"</option>")
-                }
+                allanswers.append("<option value=\""+suggestions[i]["index"]+"\">"+suggestions[i]["name"]+"</option>")
             }
             
             allanswers.select2({width: "10em"})
@@ -38,10 +37,21 @@ $(document).ready(function(){
 
     // Make the answers button work
     $("#answercheck").click( function() {
+        // If they've shown the answers then this button is used to reset everything
+        if ($(this).text() == "Play Again") {
+            window.scrollTo(0, 0);
+            setTimeout(location.reload.bind(location), 500);
+            return;
+        }
+
         $("#fadediv").show();
         answers = $(".answers");
 
         $.getJSON('roles.json', function(roles) {
+
+            // Arrange the roles alphabetically by the name of the person
+            roles.sort((a,b) => (a["name"]>b["name"]) ? 1 : -1);
+
             //roles is the JSON string
             rolediv = $("#roles")
             answerlabels = $(".answerlabel")
@@ -65,15 +75,15 @@ $(document).ready(function(){
             // Set the colours and scores
             if (score < 5) {
                 $("#answerdiv").css("background-color","red")
-                $("#sarkycomment").text("All that effort - and for what?")
+                $("#sarkycomment").text("You know, the one with the brown hair.  Stood on the left a lot.")
             }
             else if (score < 14) {
                 $("#answerdiv").css("background-color","orange")
-                $("#sarkycomment").text("Not bad, shows you're paying attention.")
+                $("#sarkycomment").text("Not bad, but read your programmes more carefully from now on.")
             }
             else {
                 $("#answerdiv").css("background-color","green")
-                $("#sarkycomment").text("Well done!  The rolemaster is weeping with appreciation.")
+                $("#sarkycomment").text("You are an encyclopedia of characters!")
 
             }
 
@@ -89,15 +99,41 @@ $(document).ready(function(){
         $("#fadediv").fadeOut();
     })
 
-    // Reset everything when they opt to play again
-    $('#playagain').click (function() {
+    $("#showanswers").click( function() {
 
-        answers = $(".answers");
+        // We need a dictionary to be able to look up the 
+        // names of any given id.
+
+        lookup = {}
+
+        all_options = $(".answers").first().children();
+
+        for (i=1;i<all_options.length;i++) {
+            lookup[all_options.eq(i).val()] = all_options.eq(i).text()
+        }
+
+
+        $.getJSON('roles.json', function(roles) {
+            //roles is the JSON string
+            rolesdiv = $("#roles")
+            answerlabels = $(".answerlabel")
+
+            // Arrange the roles alphabetically by the name of the person
+            roles.sort((a,b) => (a["name"]>b["name"]) ? 1 : -1);
+
+    
+            for (i=0; i < roles.length; i++) {
+                answerlabels.eq(i).text("Answer: "+lookup[roles[i]["index"]])
+            }
+        });
+
+        $(".select2").hide();
         $('#answerdiv').slideUp();
         $("#fadediv").fadeOut();
-        window.scrollTo(0, 0);
+        // TODO Change the text to play again.
+        $("#answercheck").text("Play Again");
 
-        setTimeout(location.reload.bind(location), 500);
-    })
+    });
+
 
   }); 
